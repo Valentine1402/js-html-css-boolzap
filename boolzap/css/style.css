@@ -17,7 +17,6 @@ p{
 
 /* colore sfondo pagina */
 html, body {
- margin:0;
  height:100%;
 }
 
@@ -56,11 +55,20 @@ div#box2 {
 /* div login */
 .login{
  display: flex;
- border: 1px solid grey;
  background: lightgrey;
  height: 70px;
+ justify-content: space-between;
 }
 
+.login img{
+ height: 50px;
+ margin: 17px;
+}
+
+.login ul li i {
+ margin-top: 20px;
+ font-size: 20px;
+}
 /* div notifiche */
 .notifiche{
  display: flex;
@@ -79,9 +87,16 @@ div#box2 {
 /* div search*/
 .search{
  display: flex;
- background: lightgrey;
- border: 1px solid grey;
+ background: #e5e6e2;
  height: 50px;
+}
+
+.search-bar{
+width: 285px;
+height: 40px;
+color: lightgrey;
+margin: 4px;
+box-shadow: 0 0 7px lightgrey;
 }
 
 /* div utenti */
@@ -120,18 +135,20 @@ div#box2 {
  justify-content: center;
 }
 
-.writing ul li {
+.writing ul li, .login ul li {
  text-decoration: none;
  display: inline-block;
  color: grey;
  margin:10px;
+ vertical-align: middle;
 }
 
 /* imput tetx zone */
-body > div.container > div.box-dx > div.writing > ul > li:nth-child(2) > input{
+.message{
  width: 500px;
  height: 45px;
  border-radius: 10px;
+ color: lightgrey;
 }
 
 /* icons text zone */
