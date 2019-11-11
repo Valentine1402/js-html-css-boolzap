@@ -41,13 +41,14 @@ div#box2 {
 .box-sx{
  display: flex;
  flex-basis: 30%;
- border: 0,1px solid lightgrey;
+ border: 1px solid grey;
  flex-direction: column;
 }
 
 /* div login */
 .login{
  display: flex;
+ border: 1px solid grey;
  background: lightgrey;
  height: 70px;
 }
@@ -63,6 +64,7 @@ div#box2 {
 .search{
  display: flex;
  background: lightgrey;
+ border: 1px solid grey;
  height: 50px;
 }
 
@@ -70,6 +72,7 @@ div#box2 {
 .lista-utenti{
  display: flex;
  border: 1px solid lightgrey;
+ border: 1px solid grey;
  height: 100vh;
 }
 
@@ -77,7 +80,7 @@ div#box2 {
 .box-dx{
  display: flex;
  flex-basis: 70%;
- border: 1px solid lightgrey;
+ border: 1px solid grey;
  background-image: url("../img/wa.jpg");
  background-image: cover;
  flex-direction: column;
@@ -88,6 +91,7 @@ div#box2 {
 .utente{
  display: flex;
  background: lightgrey;
+ border: 1px solid grey;
  height: 70px;
 }
 
@@ -96,4 +100,12 @@ div#box2 {
  display: flex;
  background: #ece5dd;
  height: 70px;
+ border: 1px solid grey;
+}
+
+.writing ul li {
+ text-decoration: none;
+ display: inline-block;
+ color: grey;
+ margin:20px;
 }
