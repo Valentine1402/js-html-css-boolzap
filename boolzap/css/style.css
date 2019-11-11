@@ -48,7 +48,6 @@ div#box2 {
 .box-sx{
  display: flex;
  flex-basis: 30%;
- border: 1px solid grey;
  flex-direction: column;
 }
 
@@ -62,7 +61,7 @@ div#box2 {
 
 .login img{
  height: 50px;
- margin: 17px;
+ margin: 16px;
 }
 
 .login ul li i {
@@ -73,8 +72,8 @@ div#box2 {
 .notifiche{
  display: flex;
  height: 70px;
- background: #34b7f1;
- color: #4c4e5c;
+ background: #128c7e;
+ color: white;
 }
 
 /* icona notifica */
@@ -93,17 +92,17 @@ div#box2 {
 
 .search-bar{
 width: 285px;
-height: 40px;
+height: 30px;
 color: lightgrey;
 margin: 4px;
 box-shadow: 0 0 7px lightgrey;
+border-radius: 30px;
 }
 
 /* div utenti */
 .lista-utenti{
  display: flex;
  border: 1px solid lightgrey;
- border: 1px solid grey;
  height: 100vh;
 }
 
@@ -111,7 +110,6 @@ box-shadow: 0 0 7px lightgrey;
 .box-dx{
  display: flex;
  flex-basis: 70%;
- border: 1px solid grey;
  background-image: url("../img/wa.jpg");
  background-image: cover;
  flex-direction: column;
@@ -119,11 +117,26 @@ box-shadow: 0 0 7px lightgrey;
 }
 
 /* div utente */
-.utente{
+.info{
  display: flex;
  background: lightgrey;
- border: 1px solid grey;
+ border-left: 1px solid grey;
  height: 70px;
+ justify-content: space-between;
+ padding: 20px;
+}
+
+.info p{
+ font-size:20px;
+}
+
+.info-utente, .info-icone{
+ display: flex;
+}
+
+.info img{
+ height: 45px;
+ padding-right: 10px;
 }
 
 /* div scrittura chat */
@@ -135,7 +148,7 @@ box-shadow: 0 0 7px lightgrey;
  justify-content: center;
 }
 
-.writing ul li, .login ul li {
+.writing ul li, .login ul li , .info ul li{
  text-decoration: none;
  display: inline-block;
  color: grey;
