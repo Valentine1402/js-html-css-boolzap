@@ -36,11 +36,43 @@ div#box2 {
 }
 
 /* box-sx */
+
+/* container gen sx */
 .box-sx{
  display: flex;
  flex-basis: 30%;
- border: 1px solid lightgrey;
+ border: 0,1px solid lightgrey;
+ flex-direction: column;
 }
+
+/* div login */
+.login{
+ display: flex;
+ background: lightgrey;
+ height: 70px;
+}
+
+/* div notifiche */
+.notifiche{
+ display: flex;
+ height: 70px;
+ background: #34b7f1;
+}
+
+/* div search*/
+.search{
+ display: flex;
+ background: lightgrey;
+ height: 50px;
+}
+
+/* div utenti */
+.lista-utenti{
+ display: flex;
+ border: 1px solid lightgrey;
+ height: 100vh;
+}
+
 /* box-dx */
 .box-dx{
  display: flex;
@@ -49,3 +81,5 @@ div#box2 {
  background-image: url("../img/wa.jpg");
  background-image: cover;
 }
+
+/*  */
