@@ -32,4 +32,20 @@ div#box2 {
  top: 30px;
  left: 180px;
  background-color : white;
+ display: flex;
+}
+
+/* box-sx */
+.box-sx{
+ display: flex;
+ flex-basis: 30%;
+ border: 1px solid lightgrey;
+}
+/* box-dx */
+.box-dx{
+ display: flex;
+ flex-basis: 70%;
+ border: 1px solid lightgrey;
+ background-image: url("../img/wa.jpg");
+ background-image: cover;
 }
