@@ -4,7 +4,15 @@
  padding: 0;
  box-sizing: border-box;
  font-family: 'Roboto', sans-serif;
- text-decoration: none;
+}
+
+ul li{
+ list-style: none;
+}
+
+p{
+ font-size: 13px;
+ margin: 5px;
 }
 
 /* colore sfondo pagina */
@@ -58,6 +66,14 @@ div#box2 {
  display: flex;
  height: 70px;
  background: #34b7f1;
+ color: #4c4e5c;
+}
+
+/* icona notifica */
+.fa-bell-slash{
+ font-size: 23px;
+ margin:10px;
+ color:white;
 }
 
 /* div search*/
@@ -101,11 +117,25 @@ div#box2 {
  background: #ece5dd;
  height: 70px;
  border: 1px solid grey;
+ justify-content: center;
 }
 
 .writing ul li {
  text-decoration: none;
  display: inline-block;
  color: grey;
- margin:20px;
+ margin:10px;
+}
+
+/* imput tetx zone */
+body > div.container > div.box-dx > div.writing > ul > li:nth-child(2) > input{
+ width: 500px;
+ height: 45px;
+ border-radius: 10px;
+}
+
+/* icons text zone */
+.fa-smile, .fa-microphone{
+ font-size: 25px;
+ margin-top: 3px;
 }
