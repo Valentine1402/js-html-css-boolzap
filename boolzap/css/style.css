@@ -80,6 +80,20 @@ div#box2 {
  border: 1px solid lightgrey;
  background-image: url("../img/wa.jpg");
  background-image: cover;
+ flex-direction: column;
+ justify-content: space-between;
 }
 
-/*  */
+/* div utente */
+.utente{
+ display: flex;
+ background: lightgrey;
+ height: 70px;
+}
+
+/* div scrittura chat */
+.writing{
+ display: flex;
+ background: #ece5dd;
+ height: 70px;
+}
