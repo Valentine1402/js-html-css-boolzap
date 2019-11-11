@@ -1,0 +1,24 @@
+/* regole generali */
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family: 'Roboto', sans-serif;
+ text-decoration: none;
+}
+
+/* colore sfondo pagina */
+html, body {
+ margin:0;
+ height:100%;
+}
+
+div#box {
+ height:20%;
+ background:#00bfa5;
+}
+
+div#box2 {
+ height:80%;
+ background:#fff;
+}
