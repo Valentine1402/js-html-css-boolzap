@@ -16,9 +16,20 @@ html, body {
 div#box {
  height:20%;
  background:#00bfa5;
+ position: relative;
 }
 
 div#box2 {
  height:80%;
- background:#fff;
+ background:#ece5dd;
+}
+
+/* container generale*/
+.container{
+ height: 600px;
+ width: 1000px;
+ position: absolute;
+ top: 30px;
+ left: 180px;
+ background-color : white;
 }
