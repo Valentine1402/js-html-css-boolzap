@@ -6,7 +6,7 @@
  font-family: 'Roboto', sans-serif;
 }
 
-ul li{
+ul li {
  list-style: none;
 }
 
@@ -43,7 +43,6 @@ div#box2 {
 }
 
 /* box-sx */
-
 /* container gen sx */
 .box-sx{
  display: flex;
@@ -68,6 +67,7 @@ div#box2 {
  margin-top: 20px;
  font-size: 20px;
 }
+
 /* div notifiche */
 .notifiche{
  display: flex;
@@ -88,6 +88,15 @@ div#box2 {
  display: flex;
  background: #e5e6e2;
  height: 50px;
+ position: relative;
+}
+
+.cerca-amici{
+ position: absolute;
+ left: 10px;
+ top: 12px;
+ color: grey;
+ height: 13px;
 }
 
 .search-bar{
@@ -97,6 +106,7 @@ color: lightgrey;
 margin: 4px;
 box-shadow: 0 0 7px lightgrey;
 border-radius: 30px;
+padding-left: 20px;
 }
 
 /* div utenti */
@@ -127,6 +137,26 @@ padding-top: 10px;
  background-image: cover;
  flex-direction: column;
  justify-content: space-between;
+}
+
+#verde, #bianco{
+ margin: 50px 20px;
+}
+
+.msgsent {
+ background-color: #dcf8c6;
+ padding: 5px;
+ margin-top: 10px;
+ width: 150px;
+ border-radius: 8px;
+}
+
+.risposta {
+ background-color: white;
+ padding: 5px;
+ margin-top: 10px;
+ width: 150px;
+ border-radius: 8px;
 }
 
 /* div info */
@@ -174,11 +204,17 @@ padding-top: 10px;
  width: 500px;
  height: 45px;
  border-radius: 10px;
- color: lightgrey;
+ color: grey;
+ padding: 10px;
 }
 
 /* icons text zone */
 .fa-smile, .fa-microphone{
  font-size: 25px;
  margin-top: 3px;
+}
+
+/* Parte di templating */
+#template {
+ display: none;
 }
