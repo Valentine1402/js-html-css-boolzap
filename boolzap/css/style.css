@@ -18,6 +18,7 @@ p{
 /* colore sfondo pagina */
 html, body {
  height:100%;
+ background-image: linear-gradient(45deg, #dde9d7 ,#c7c9b5);
 }
 
 div#box {
@@ -48,6 +49,7 @@ div#box2 {
  display: flex;
  flex-basis: 30%;
  flex-direction: column;
+ height: 100%;
 }
 
 /* div login */
@@ -113,7 +115,7 @@ padding-left: 20px;
 .lista-utenti{
  display: flex;
  border: 1px solid lightgrey;
- height: calc(100vh - 100px);
+ height: 100%;
  max-width: 100%;
  flex-direction: column;
 }
@@ -139,7 +141,7 @@ padding-top: 10px;
  background-image: cover;
  flex-direction: column;
  justify-content: space-between;
- height: calc(100vh - 100px);
+ height: 100%;
  max-width: 100%;
 }
 
@@ -159,6 +161,19 @@ padding-top: 10px;
  margin-top: 10px;
  width: 150px;
  border-radius: 8px;
+ position: relative;
+}
+
+/*
+.triangle {
+ width: 15px;
+ height: 15px;
+ background-color: #dcf8c6;
+ position: absolute;
+ top: 3px;
+ left:139px;
+ transform: rotate(25deg);
+ right: 29px;
 }
 
 .risposta {
@@ -168,7 +183,7 @@ padding-top: 10px;
  width: 150px;
  border-radius: 8px;
 }
-
+*/
 /* div info */
 .info{
  display: flex;
@@ -199,9 +214,6 @@ padding-top: 10px;
  height: 70px;
  border-top: 1px solid grey;
  justify-content: center;
- position: fixed;
- z-index: 2;
- bottom: 45px;
  width: 698px;
 }
 
