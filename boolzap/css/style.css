@@ -137,6 +137,14 @@ padding-top: 10px;
  background-image: cover;
  flex-direction: column;
  justify-content: space-between;
+ height: calc(100vh - 100px);
+ max-width: 100%;
+}
+
+/* div di stampa js */
+.centrale{
+ display: flex;
+ overflow-y: auto;
 }
 
 #verde, #bianco{
@@ -189,6 +197,10 @@ padding-top: 10px;
  height: 70px;
  border-top: 1px solid grey;
  justify-content: center;
+ position: fixed;
+ z-index: 2;
+ bottom: 45px;
+ width: 698px
 }
 
 .writing ul li, .login ul li , .info ul li{
