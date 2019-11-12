@@ -28,7 +28,7 @@ div#box {
 
 div#box2 {
  height:80%;
- background:#ece5dd;
+ background-image: linear-gradient(45deg, #dde9d7 ,#c7c9b5);
 }
 
 /* container generale*/
@@ -106,6 +106,19 @@ border-radius: 30px;
  height: 100vh;
 }
 
+.friends{
+ border: 1px solid lightgrey;
+ height: 55px;
+ display: flex;
+ width: 300px;
+ padding: 5px;
+}
+
+.ora-msg {
+padding-left: 70px;
+padding-top: 10px;
+}
+
 /* box-dx */
 .box-dx{
  display: flex;
@@ -116,7 +129,7 @@ border-radius: 30px;
  justify-content: space-between;
 }
 
-/* div utente */
+/* div info */
 .info{
  display: flex;
  background: lightgrey;
@@ -134,7 +147,7 @@ border-radius: 30px;
  display: flex;
 }
 
-.info img{
+.info img, .friends img{
  height: 45px;
  padding-right: 10px;
 }
@@ -144,7 +157,7 @@ border-radius: 30px;
  display: flex;
  background: #ece5dd;
  height: 70px;
- border: 1px solid grey;
+ border-top: 1px solid grey;
  justify-content: center;
 }
 
@@ -156,7 +169,7 @@ border-radius: 30px;
  vertical-align: middle;
 }
 
-/* imput tetx zone */
+/* imput text zone */
 .message{
  width: 500px;
  height: 45px;
