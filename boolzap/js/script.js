@@ -12,8 +12,6 @@ $( document ).ready(function(){
   // cloniamo il div che sta dentro template
   var elmentmsg = $("#template .msgsent").clone();
 
-  console.log(elmentmsg);
-
   // modifica questa copia di "msgsent" aggiungendogli il testo del messaggio
   elmentmsg.find(".msg").text(messaggio);
 
@@ -22,11 +20,6 @@ $( document ).ready(function(){
 
   // ripuliamo il contenuto dell'input, per UX
   $(".message").val("");
-
-  //do una condizione affinche si scriva per forza qualcosa
-  if (messaggio.length == 0) {
-   alert("inserisci un messaggio!")
-  }
 
 //aggiunto piccola animazione sms
   $(".msgsent").animate({
@@ -37,5 +30,27 @@ $( document ).ready(function(){
     });
 
   })
+
+  // Funzione che mi permette di cercare un contatto nella barra dei contatti
+  $('.search-bar').keyup(function(event){
+    var cerca_Nome=$(this).val().toLowerCase();
+
+      $('.friends').each(function(){
+        var nomeCercato=$(this).find('b').text().toLowerCase();
+        if (nomeCercato.includes(cerca_Nome)) {
+          $(this).show();
+        }
+        else {
+          $(this).hide();
+        }
+      });
+
+  });
+
+
+
+
+
+
 
  });
