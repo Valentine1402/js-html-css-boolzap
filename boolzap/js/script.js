@@ -24,6 +24,7 @@ $( document ).ready(function(){
   var messaggio = $(".message").val();
   var elmentmsg = $("#template .msgsent").clone();
   elmentmsg.find(".msg").text(messaggio);
+  elmentmsg.find(".time-message").text(ora);
   var stampa = $("#verde").append(elmentmsg);
   $(".message").val("");
   //aggiunto piccola animazione sms
@@ -37,6 +38,7 @@ $( document ).ready(function(){
     setTimeout(function () {
      var answer = $("#template .sendbyCPU").clone();
      answer.find(".msg").text("Ciao, come stai?");
+     answer.find(".time-message").text(ora);
      $("#bianco").append(answer);
     }, 1000);
   })
@@ -55,8 +57,19 @@ $( document ).ready(function(){
          $(this).hide();
        }
    });
+ });
 
-  });
-
+  // Creo una variabile che mi permette di avere l'ora e i minuti precisi da mettere nei messaggi
+  var time= new Date();
+  var hours=aggiungiZero(time.getHours());
+  var minutes=aggiungiZero(time.getMinutes());
+  var ora= hours+":"+ minutes;
+  // Funzione che uso per inserire lo zero davanti al numero nel caso i minuti o le ore siano minori di 10
+  function aggiungiZero(i) {
+  if (i < 10) {
+    i = "0" + i;
+  }
+  return i;
+  }
 
 });

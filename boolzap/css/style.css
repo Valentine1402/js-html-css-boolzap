@@ -199,6 +199,14 @@ padding-left: 25px;
  transform: rotate(45deg);
  right: 29px;
 }
+
+.time-message{
+ font-size: 10px;
+ margin:3px;
+ position: absolute;
+ bottom: 3px;
+ right: 5px;
+}
 /* div info */
 .info{
  display: flex;
