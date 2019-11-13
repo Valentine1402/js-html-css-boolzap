@@ -127,6 +127,10 @@ padding-left: 25px;
  justify-content: space-around;
 }
 
+.friends:hover{
+ background: lightgrey;
+ cursor: pointer;
+}
 
 /* box-dx */
 .box-dx{
@@ -146,14 +150,18 @@ padding-left: 25px;
  overflow-y: auto;
 }
 
-#verde, #bianco{
- margin: 50px 20px;
+#verde{
+ margin: 257px 20px;
 }
+
+ #bianco{
+ margin: 293px -120px;
+ }
 
 .msgsent {
  background-color: #dcf8c6;
- padding: 5px;
- margin-top: 10px;
+ padding: 7px;
+ margin-top: 30px;
  width: 150px;
  border-radius: 8px;
  position: relative;
@@ -165,20 +173,32 @@ padding-left: 25px;
  height: 15px;
  background-color: #dcf8c6;
  position: absolute;
- top: 24px;
- left:-8px;
+ top: 18px;
+ left:141px;
  transform: rotate(45deg);
  right: 29px;
 }
 
-.risposta {
+.sendbyCPU {
  background-color: white;
- padding: 5px;
- margin-top: 10px;
+ padding: 7px;
+ margin-top: 30px;
  width: 150px;
  border-radius: 8px;
+ position: relative;
+ height: 40px;
 }
 
+.triangle-bianco{
+ width: 15px;
+ height: 15px;
+ background-color: white;
+ position: absolute;
+ top: 18px;
+ left:-5px;
+ transform: rotate(45deg);
+ right: 29px;
+}
 /* div info */
 .info{
  display: flex;
