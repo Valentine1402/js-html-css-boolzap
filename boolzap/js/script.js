@@ -9,8 +9,7 @@ $( document ).ready(function(){
   console.log(messaggio);
 
 
-  // cloniamo (facciamo una copia) del div con classe "msgsent" che sta dentro
-  // un div con ID "template"
+  // cloniamo il div che sta dentro template
   var elmentmsg = $("#template .msgsent").clone();
 
   console.log(elmentmsg);
@@ -19,11 +18,23 @@ $( document ).ready(function(){
   elmentmsg.find(".msg").text(messaggio);
 
   // appendiamo una copia con testo valorizzato del div "msgsent"
-  $("#verde").append(elmentmsg);
+  var stampa = $("#verde").append(elmentmsg);
 
   // ripuliamo il contenuto dell'input, per UX
   $(".message").val("");
 
+  //do una condizione affinche si scriva per forza qualcosa
+  if (messaggio.length == 0) {
+   alert("inserisci un messaggio!")
+  }
+
+//aggiunto piccola animazione sms
+  $(".msgsent").animate({
+      left: '450px',
+      opacity: '0.8',
+      height: '50px',
+      width: '150px'
+    });
 
   })
 
