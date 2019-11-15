@@ -72,4 +72,14 @@ $( document ).ready(function(){
   return i;
   }
 
+
+  // Funzione che mi permette di aprire un contatto della barra
+  $('.friends').click(function(){
+    var foto=$(this).find("img").attr('src');
+    var nome=$(this).find("b").text();
+    $('.info-utente img').attr('src',foto);
+    $('.info-utente p').text(nome);
+    
+  });
+
 });

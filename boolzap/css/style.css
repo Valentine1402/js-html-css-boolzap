@@ -207,6 +207,26 @@ padding-left: 25px;
  bottom: 3px;
  right: 5px;
 }
+
+/* da rivedere */
+.message-options{
+ display: none;
+	background: white;
+	box-shadow: 2px 2px 20px 1px;
+	position: absolute;
+	bottom: -110px;
+ right: 0;
+ width: 150px;
+ padding: 10px;
+}
+/* da rivedere */
+.opzioni span{
+ cursor: pointer;
+ width: 50%;
+ padding: 5px;
+ text-align: center;
+}
+
 /* div info */
 .info{
  display: flex;
