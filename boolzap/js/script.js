@@ -4,7 +4,7 @@ $( document ).ready(function(){
  // Funzione che mi permette di inviare il messaggio dell'utente nel caso si prema il tasto Invio, cambiando anche l'icona vicino all'input
  // invio mess
 
- $('.message').keydown(function(event){
+ $('.message').keydown(function(){
    if (event.which==13) {
      inviaMessaggioUtente();
    }
@@ -20,6 +20,7 @@ $( document ).ready(function(){
 
 
  // azioni che mi permettono di inviare un messaggio sullo schermo
+
   $(".fa-microphone").click(function(){
   var messaggio = $(".message").val();
   var elmentmsg = $("#template .msgsent").clone();
@@ -27,6 +28,7 @@ $( document ).ready(function(){
   elmentmsg.find(".time-message").text(ora);
   var stampa = $("#verde").append(elmentmsg);
   $(".message").val("");
+
   //aggiunto piccola animazione sms
   $(".msgsent").animate({
       left: '450px',
@@ -79,7 +81,17 @@ $( document ).ready(function(){
     var nome=$(this).find("b").text();
     $('.info-utente img').attr('src',foto);
     $('.info-utente p').text(nome);
-    
   });
 
-});
+
+  // al click su un messaggio si apre la finestra cancella messaggio
+  $(document).on('click', 'i.fas.fa-angle-down', function() {
+  $(".message-options").fadeIn();
+  })
+  //funzione per cancellare messaggio
+  $(document).on('click', '.delete', function() {
+  $(".message-options, .msgsent").fadeOut();
+  });
+
+
+ });

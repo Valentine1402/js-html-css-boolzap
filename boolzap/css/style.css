@@ -285,4 +285,294 @@ padding-left: 25px;
 /* Parte di templating */
 #template {
  display: none;
+}/* regole generali */
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family: 'Roboto', sans-serif;
+}
+
+ul li {
+ list-style: none;
+}
+
+p{
+ font-size: 13px;
+ margin: 5px;
+}
+
+/* colore sfondo pagina */
+html, body {
+ height:100%;
+ background-image: linear-gradient(45deg, #dde9d7 ,#c7c9b5);
+}
+
+div#box {
+ height:20%;
+ background:#00bfa5;
+ position: relative;
+}
+
+div#box2 {
+ height:80%;
+ background-image: linear-gradient(45deg, #dde9d7 ,#c7c9b5);
+}
+
+/* container generale*/
+.container{
+ height: 600px;
+ width: 1000px;
+ position: absolute;
+ top: 30px;
+ left: 180px;
+ background-color : white;
+ display: flex;
+}
+
+/* box-sx */
+/* container gen sx */
+.box-sx{
+ display: flex;
+ flex-basis: 30%;
+ flex-direction: column;
+ height: 100%
+}
+
+/* div login */
+.login{
+ display: flex;
+ background: lightgrey;
+ height: 70px;
+ justify-content: space-between;
+}
+
+.login img{
+ height: 50px;
+ margin: 16px;
+}
+
+.login ul li i {
+ margin-top: 20px;
+ font-size: 20px;
+}
+
+/* div notifiche */
+.notifiche{
+ display: flex;
+ height: 70px;
+ background: #128c7e;
+ color: white;
+}
+
+/* icona notifica */
+.fa-bell-slash{
+ font-size: 23px;
+ margin:10px;
+ color:white;
+}
+
+/* div search*/
+.search{
+ display: flex;
+ background: #e5e6e2;
+ height: 50px;
+ position: relative;
+}
+
+.cerca-amici{
+ position: absolute;
+ left: 20px;
+ top: 16px;
+ color: grey;
+ height: 13px;
+}
+
+input.search-bar{
+width: 285px;
+height: 30px;
+margin: 8px;
+box-shadow: 0 0 7px lightgrey;
+border-radius: 30px;
+padding-left: 25px;
+}
+
+/* div utenti */
+.lista-utenti{
+ border: 1px solid lightgrey;
+ height: calc(100% - 140px);
+ overflow-y: auto;
+ max-width: 100%;
+}
+
+.friends{
+ border: 1px solid lightgrey;
+ height: 55px;
+ width: 300px;
+ padding: 5px;
+ display: flex;
+ justify-content: space-around;
+}
+
+.friends:hover{
+ background: lightgrey;
+ cursor: pointer;
+}
+
+/* box-dx */
+.box-dx{
+ display: flex;
+ flex-basis: 70%;
+ background-image: url("../img/wa.jpg");
+ background-image: cover;
+ flex-direction: column;
+ justify-content: space-between;
+ height: 100%;
+ max-width: 100%;
+}
+
+.conversation {
+ display: none;
+ width: 100%;
+ height: calc(10% - 90px);
+ background-image: url("../img/wa.jpg");
+ overflow-y: auto;
+}
+
+.conversation.active{
+ display: flex;
+}
+
+.play {
+ display: block;
+}
+
+/* div di stampa js */
+.centrale{
+ display: flex;
+ overflow-y: auto;
+}
+
+.msgsent {
+ background-color: #dcf8c6;
+ padding: 7px;
+ width: 150px;
+ border-radius: 8px;
+ position: relative;
+}
+
+.triangle {
+ width: 15px;
+ height: 15px;
+ background-color: #dcf8c6;
+ position: absolute;
+ top: 18px;
+ left:141px;
+ transform: rotate(45deg);
+ right: 29px;
+}
+
+.sendbyCPU {
+ background-color: white;
+ padding: 7px;
+ width: 150px;
+ border-radius: 8px;
+ position: relative;
+ height: 40px;
+}
+
+.triangle-bianco{
+ width: 15px;
+ height: 15px;
+ background-color: white;
+ position: absolute;
+ top: 18px;
+ left:-5px;
+ transform: rotate(45deg);
+ right: 29px;
+}
+
+.time-message{
+ font-size: 10px;
+ margin:3px;
+ position: absolute;
+ bottom: 3px;
+ right: 5px;
+}
+
+.message-options{
+	background: white;
+	box-shadow: 2px 2px 20px 1px;
+	position: absolute;
+	bottom: -110px;
+ right: 0;
+ width: 150px;
+ padding: 10px;
+}
+
+.opzioni span{
+ cursor: pointer;
+ width: 50%;
+ padding: 5px;
+ text-align: center;
+}
+
+/* div info */
+.info{
+ display: flex;
+ background: lightgrey;
+ border-left: 1px solid grey;
+ height: 70px;
+ justify-content: space-between;
+ padding: 20px;
+}
+
+.info p{
+ font-size:20px;
+}
+
+.info-utente, .info-icone{
+ display: flex;
+}
+
+.info img, .friends img{
+ height: 45px;
+}
+
+/* div scrittura chat */
+.writing{
+ display: flex;
+ background: #ece5dd;
+ height: 70px;
+ border-top: 1px solid grey;
+ justify-content: center;
+ width: 698px;
+}
+
+.writing ul li, .login ul li , .info ul li{
+ text-decoration: none;
+ display: inline-block;
+ color: grey;
+ margin:10px;
+ vertical-align: middle;
+}
+
+/* imput text zone */
+.message{
+ width: 500px;
+ height: 45px;
+ border-radius: 10px;
+ color: grey;
+ padding: 10px;
+}
+
+/* icons text zone */
+.fa-smile, .fa-microphone{
+ font-size: 25px;
+ margin-top: 3px;
+}
+
+/* Parte di templating */
+#template {
+ display: none;
 }
