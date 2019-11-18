@@ -23,15 +23,15 @@ $( document ).ready(function(){
 
   $(".fa-microphone").click(function(){
   var messaggio = $(".message").val();
-  var elmentmsg = $("#template .msgsent").clone();
+  var elmentmsg = $("#template .msgsent ").clone();
   elmentmsg.find(".msg").text(messaggio);
   elmentmsg.find(".time-message").text(ora);
-  var stampa = $("#verde").append(elmentmsg);
+  var stampa = $(".centrale").append(elmentmsg);
   $(".message").val("");
 
   //aggiunto piccola animazione sms
   $(".msgsent").animate({
-      left: '450px',
+      left: '480px',
       opacity: '0.8',
       height: '40px',
       width: '150px'
@@ -41,7 +41,7 @@ $( document ).ready(function(){
      var answer = $("#template .sendbyCPU").clone();
      answer.find(".msg").text("Ciao, come stai?");
      answer.find(".time-message").text(ora);
-     $("#bianco").append(answer);
+     $(".centrale").append(answer);
     }, 1000);
   })
 
@@ -85,12 +85,16 @@ $( document ).ready(function(){
 
 
   // al click su un messaggio si apre la finestra cancella messaggio
+
+
   $(document).on('click', 'i.fas.fa-angle-down', function() {
+  $(this)
   $(".message-options").fadeIn();
+
   })
   //funzione per cancellare messaggio
   $(document).on('click', '.delete', function() {
-  $(".message-options, .msgsent").fadeOut();
+  $(".message-options , .msgsent" ).fadeOut();
   });
 
 
