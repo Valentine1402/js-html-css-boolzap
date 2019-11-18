@@ -89,11 +89,13 @@ $( document ).ready(function(){
 
   $(document).on('click', 'i.fas.fa-angle-down', function() {
   $(this)
-  $(".message-options").fadeIn();
+  $(".message-options").toggle();
+  console.log($(this));
 
   })
   //funzione per cancellare messaggio
   $(document).on('click', '.delete', function() {
+  $(this)
   $(".message-options , .msgsent" ).fadeOut();
   });
 
