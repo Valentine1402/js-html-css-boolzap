@@ -87,16 +87,21 @@ $( document ).ready(function(){
   // al click su un messaggio si apre la finestra cancella messaggio
 
 
-  $(document).on('click', 'i.fas.fa-angle-down', function() {
-  $(this)
-  $(".message-options").toggle();
-  console.log($(this));
-
+  $(document).on('click', '.msgsent i.fas.fa-angle-down', function() {
+   $(this).parents('.msgsent').find('.message-options').toggle();
   })
   //funzione per cancellare messaggio
-  $(document).on('click', '.delete', function() {
-  $(this)
-  $(".message-options , .msgsent" ).fadeOut();
+  $(document).on('click', '.msgsent .delete', function() {
+   $(this).parents('.msgsent').fadeOut();
+  });
+
+
+  $(document).on('click', '.sendbyCPU i.fas.fa-angle-down', function() {
+   $(this).parents('.sendbyCPU').find('.message-options').toggle();
+  })
+  //funzione per cancellare messaggio
+  $(document).on('click', '.sendbyCPU .delete', function() {
+   $(this).parents('.sendbyCPU').fadeOut();
   });
 
 
