@@ -4,14 +4,15 @@ $( document ).ready(function(){
  // Funzione che mi permette di inviare il messaggio dell'utente nel caso si prema il tasto Invio, cambiando anche l'icona vicino all'input
  // invio mess
 
- $('.message').keydown(function(){
+  $('.message').keydown(function(){
    if (event.which==13) {
-     inviaMessaggioUtente();
+     sendMsg();
    }
    else {
      $('.writing i').addClass("fa-paper-plane");
    }
  });
+
 
  // Funzione con cui vado a ricambiare l'icona una volta che la barra perde il focus
  $(".message").focusout(function(){
@@ -19,31 +20,33 @@ $( document ).ready(function(){
  });
 
 
- // azioni che mi permettono di inviare un messaggio sullo schermo
-
-  $(".fa-microphone").click(function(){
+ // Funzioni che mi permettono di inviare un messaggio sullo schermo
+function sendMsg(){
   var messaggio = $(".message").val();
   var elmentmsg = $("#template .msgsent ").clone();
   elmentmsg.find(".msg").text(messaggio);
   elmentmsg.find(".time-message").text(ora);
-  var stampa = $(".centrale").append(elmentmsg);
+  var stampa = $(".conversation.is-active").append(elmentmsg);
   $(".message").val("");
 
   //aggiunto piccola animazione sms
   $(".msgsent").animate({
-      left: '480px',
-      opacity: '0.8',
-      height: '40px',
-      width: '150px'
-    });
-    // funzione per generare risposta automatica
-    setTimeout(function () {
-     var answer = $("#template .sendbyCPU").clone();
-     answer.find(".msg").text("Ciao, come stai?");
-     answer.find(".time-message").text(ora);
-     $(".centrale").append(answer);
-    }, 1000);
-  })
+    left: '480px',
+    opacity: '0.8',
+    height: '40px',
+    width: '150px'
+  });
+  // funzione per generare risposta automatica
+  setTimeout(function () {
+    var answer = $("#template .sendbyCPU").clone();
+    answer.find(".msg").text("Ciao, come stai?");
+    answer.find(".time-message").text(ora);
+    $(".conversation.is-active").append(answer);
+  }, 1000);
+}
+  
+
+  
 
 
  // Funzione che mi permette di cercare un contatto nella barra dei contatti
@@ -83,6 +86,23 @@ $( document ).ready(function(){
     $('.info-utente p').text(nome);
   });
 
+
+  // Funzione che mi permette di associare un div ad un altro
+  $('.friends').click(function () {
+
+    if (!$(this).hasClass('is-active')) {
+      $('.friends').removeClass('is-active');
+      $(this).addClass('is-active');
+
+      var $currentDataName = $(this).attr('chat');
+      console.log($currentDataName);
+
+      var go = $('.conversation').removeClass('is-active');
+      console.log(go);
+      var res = $('.conversation[chat="' + $currentDataName + '"]').addClass('is-active');
+      console.log(res);
+    }
+  }); 
 
   // al click su un messaggio si apre la finestra cancella messaggio
 

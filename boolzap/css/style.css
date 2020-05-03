@@ -163,22 +163,21 @@ padding-left: 25px;
 
 
 .conversation {
- display: none;
  width: 100%;
- height: calc(10% - 90px);
+ height: 100%;
  background-image: url("../img/wa.jpg");
  overflow-y: auto;
 }
-/*
-.conversation.active{
- display: flex;
-}
 
-.prova {
+.conversation{
+	display: none;
+}
+.conversation.is-active{
  display: block;
 }
 
-*/
+
+
 .triangle {
  width: 15px;
  height: 15px;
