@@ -24,8 +24,8 @@ $( document ).ready(function(){
 function sendMsg(){
   var messaggio = $(".message").val();
   var elmentmsg = $("#template .msgsent ").clone();
-  elmentmsg.find(".msg").text(messaggio);
-  elmentmsg.find(".time-message").text(ora);
+      elmentmsg.find(".msg").text(messaggio);
+      elmentmsg.find(".time-message").text(ora);
   var stampa = $(".conversation.is-active").append(elmentmsg);
   $(".message").val("");
 
